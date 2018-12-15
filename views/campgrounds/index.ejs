@@ -1,2 +1,14 @@
 <% include ../partials/header %>
 <h1>Welcome to Campgrounds page</h1>
+<div class="row">
+    <% campgrounds.forEach(function(campground) { %>
+      <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="<%= campground.image %>" alt="Campground image">
+          <div class="card-body">
+            <h5><%= campground.name %></h5>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+</div>
